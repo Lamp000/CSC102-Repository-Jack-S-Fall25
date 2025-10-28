@@ -58,15 +58,56 @@
             console.log("age is 5");
         }
         else if(age == 18){
-            console.log("age is 18 - you are an adult")
+            console.log("age is 18 - you are an adult");
         }
         else if(age==25){
-            console.log("age is 25 - car renting is now cheaper")
+            console.log("age is 25 - car renting is now cheaper");
         }
         // the else is a catch-all
         else{
-            console.log("age is not 5")
+            console.log("age is not 5");
         }
+
+        // Loops - let us run a chunk of coe over and over again
+        // nice for work with data, displaying information
+        // or loops a loop that runs a set number of times
+        // while loops a loop that runs an undetermined number of times
+
+        // for loop
+        // the first section of the for loop is a couner variable - i is most commonly used as the name of this variable
+        // the seond section of the for loop is the condition that has to be true for the loop to run
+        // the third section of the for loop is where we change he value of our counter variable (i)
+        // most of the time we add 1 to the counter using counter++ which is equivalent to i->i+1
+        for(let i = 0; i < 5; i++){
+            // write the code here that you want to have run 5 times
+            console.log("i=" + i.toString());
+        }
+
+        // while loop
+        // geerally speaking, it is unclear how many times the while loop will run 
+        // works great with user input
+
+        // set up the variable that we want the while loop to test
+        let exit = "no";
+
+        // test for a condiion that once it is no longer true, stop ruunning the loop
+        // while loops may run 0 times if the condition is not true
+        // while loops generaly do not un he same number of times each iteration
+        // while loops can run an infinite number of times each iteration
+        // while loops can run an infinite number of times (this is BAD)
+        while(exit != "yes"){
+            console.log("test my infinite loop");
+
+            // change the condition that we are testing to get out of the loop
+            exit = "yes";
+        }
+
+        // do while loop
+        // the loop runs at least 1 time
+        do{
+            // do something here
+            console.log("do while loop");
+        }while(exit != "yes"); // make sure you alwas place a semicolon (;) here
     </script>
 </body>
 </html>
