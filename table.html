@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Programming Mistakes</h1>
+        <nav>
+            <a href="index.html">Index</a>
+            <br>
+            <a href="boards.html">Boards</a>
+            <br>
+            <a href="array practice.html">Arrays</a>
+            <br>
+            <a href="events.html">Event Handler</a>
+            <br>
+            <a href="palindrone.html">Palindrome Tester</a>
+            <br>
+            <a href="table.html">Statistics</a>
+            <br>
+            <a href="w4game.html">Dice Game</a>
+         </nav>
+        </header>
+        <table id="tblData">
+            <caption>Programming Mistakes and the costs</caption>
+            <!-- tr is table row - each row should be in a tr -->
+            <!-- <tr>
+                td - table data/cell/column - the actualy data goes here
+                <td></td>
+                <td></td>
+            </tr> -->
+            <tr>
+                <!-- th is the table heading -->
+                <th>Project</th>
+                <th>Year</th>
+                <th>Cost</th>
+            </tr>
+        </table>
+    </main>
+
+    <script>
+        // function to load the data into the tabled
+        function loadData(){
+            // array of problem projects
+            let arrProblems = [
+                // first row of data - nested array
+                ["Crowdstrike", 2024, "$5.4B"],
+                ["Facebook", 2020, "$90M"],
+                ["Citibank", 2020, "$900M"],
+                ["Mars Climate Orbiter", 1999, "$327M"]
+            ];
+
+            // nested for loops to display the data
+            for(let i=0; i<arrProblems.length; i++){
+                // create the table row to store the data
+                let tr = document.createElement("tr");
+                
+                // loop through each nested array
+                for(let j=0; j<arrProblems[i].length; j++){
+                    let td = document.createElement("td");
+                    td.setAttribute("id", ["red","blue","orange"][j]);
+                    if(((i+j)%2)==1){
+                        td.style.backgroundColor="rgb(200,200,200,0.5)";
+                    }
+                    // put the data in the td
+                    td.textContent = arrProblems[i][j];
+
+                    // append the new data to rhe existing row
+                    tr.appendChild(td);
+                }
+
+                // add the new row to the existing table
+                document.getElementById("tblData").appendChild(tr);
+            };
+        }
+        loadData();
+    </script>
+    
+</body>
+</html>

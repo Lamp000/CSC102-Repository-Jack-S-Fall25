@@ -1,6 +1,6 @@
 body{
-    background-color:rgb(255, 255, 255);
-    color: rgb(255, 146, 231);
+    background-color:rgb(255, 200, 200);
+    color: rgb(255, 0, 200);
     text-transform:capitalize;
 }
 
@@ -25,4 +25,31 @@ img{
     position: absolute;
     left:25%;
     top:25%;
+}
+table{
+    background-color: black;
+}
+table tr{
+    background-color: rgb(255, 255, 255);
+}
+table th{
+    background-color: rgb(255, 213, 213);
+    color:black;
+}
+table caption{
+    background-color: rgb(255, 255, 255);
+    color:black;
+    font-weight: bold;
+}
+table td{
+    padding:7px;
+}
+table #red{
+    color:red;
+}
+table #blue{
+    color:rgb(31, 120, 255);
+}
+table #orange{
+    color:rgb(255, 143, 69);
 }
